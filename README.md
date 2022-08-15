@@ -1,23 +1,22 @@
-# Angular Universal (Latest) + Node.js (TypeScript) - Boiler
+# TextureSlice
+
+## About
+
+Texture Slice is an open-source web app that allows users to cut out textures from images. Export your textures for use in your favorite 3d modeling software.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
+
+## Resources
+
+- [Windows 98 Icon Viewer](https://win98icons.alexmeub.com/)
+- [98.css](https://jdan.github.io/98.css/#window)
+- [Knife Icon by kotnaszynce - CC0](https://opengameart.org/node/92956)
 
 [![Build Status](https://travis-ci.com/meetdave3/angular-node-typescript-boiler.svg?branch=master)](https://travis-ci.com/meetdave3/angular-node-typescript-boiler)
 
-This project is a starter project with Node at the backend (fully written in TypeScript) and Angular on the client side. 
+This project has Node at the backend (fully written in TypeScript) and Angular on the client side. 
 
-This repo shall allow you to instantly get started with a full stack project in place. Just connect it with your favorite database and you're good to go.
-
-## Repo Features 
-
-- [x] Angular 8.2
-- [x] Bootstrap
-- [x] Lazy Loaded Routes
-- [x] Angular Material
-- [x] PWA Ready
-- [x] Server Side TypeScript
-- [x] Node.js Express API written in TypeScript
-- [x] Production Ready Build
-- [x] Established Dev Environment
-- [x] Server Side Rendering (Angular Universal)
+---
 
 ## Setup
 

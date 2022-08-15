@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FeatureService } from './feature.service';
 
 @Component({
-    selector: 'app-feature',
+    selector: 'app-cutting-floor',
     templateUrl: './feature.component.html',
     styleUrls: ['./feature.component.scss'],
     providers: [FeatureService]

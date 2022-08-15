@@ -1,0 +1,28 @@
+.window {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.window-body {
+    height: 100%;
+    margin: 1px;
+    display: flex;
+}
+
+aside {
+    width: 150px;
+    top: 19px;
+    left: -6px;
+    bottom: 16px;
+
+    .tree-view {
+        height: 100%;
+        overflow-y: scroll;
+    }
+}
+
+main {
+    margin: 50px;
+}

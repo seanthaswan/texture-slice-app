@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --aot --proxy-config proxy-config.json",
+    "start": "ng serve --aot --proxy-config proxy-config.json --watch true",
     "build": "ng build --prod",
     "tsc": "tsc -w",
     "nodemon": "nodemon dist/server/server.js",
@@ -44,7 +44,6 @@
     "ajv": "^6.5.4",
     "ajv-keywords": "^3.2.0",
     "body-parser": "^1.18.3",
-    "bootstrap": "^4.4.1",
     "core-js": "^2.6.11",
     "cors": "^2.8.4",
     "express": "^4.16.4",

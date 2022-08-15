@@ -1,0 +1,24 @@
+<form [formGroup]="myForm" (ngSubmit)="submitForm()">
+      
+    <div class="form-group">
+        <label for="file" class="custom-file-upload-button">Import Image</label>
+        <input 
+            name="file"
+            id="file" 
+            type="file" 
+            (change)="onFileChange($event)">
+            <div *ngIf="f.file.touched && f.file.invalid" class="window error-window">
+                <div *ngIf="f.file.errors.required" class="window-body">
+                    <div class="icon icon-error"></div>
+                    <p>File is required.</p>
+                </div>
+            </div>
+    </div>
+          
+    <button type="submit">Submit</button>
+</form>
+
+<div class="drag-and-drop-container">
+    <div class="icon icon-drag-drop"></div>
+    <div class="text">Click above to browse your files or drag-n-drop the image here.</div>
+</div>

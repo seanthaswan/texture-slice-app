@@ -1,6 +1,6 @@
 {
-    "short_name": "Angular 8 Boiler",
-    "name": "Angular 8 PWA",
+    "short_name": "Texture Slice",
+    "name": "Texture Slice",
     "start_url": "/",
     "theme_color": "#f48c5b",
     "background_color": "#ffffff",
@@ -8,8 +8,8 @@
     "orientation": "portrait",
     "icons": [
         {
-            "src": "/assets/angular.png",
-            "sizes": "512x512",
+            "src": "/assets/favicon/favicon-32x32.png",
+            "sizes": "32x32",
             "type": "image/png"
         }
     ]

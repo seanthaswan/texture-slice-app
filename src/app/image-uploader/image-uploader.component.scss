@@ -1,0 +1,64 @@
+.drag-and-drop-container {
+    margin: 10px 0;
+    background: rgba(0,0,0,0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &.icon-drag-drop {
+        background-image: url(../../assets/drag-and-drop-icon.png);
+        opacity: 0.7;
+        height: 93px;
+        width: 300px;
+    }
+
+    &.icon-error {
+        background-image: url(../../assets/error-icon.png);
+        height: 32px;
+        width: 32px;
+        image-rendering: pixelated;
+    }
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload-button {
+    background: silver;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+    padding: 0px 19px;
+    cursor: pointer;
+    height: 23px;
+    line-height: 23px;
+
+    &:active {
+        box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+        padding: 2px 11px 0 13px;
+    }
+    &:focus {
+        outline: 1px dotted #000;
+    }
+}
+
+.error-window {
+    margin-top: -20px;
+    margin-bottom: 5px;
+
+    .window-body {
+        display: flex;
+
+        p {
+            margin: 0 10px;
+            align-self: center;
+        }
+    }
+}

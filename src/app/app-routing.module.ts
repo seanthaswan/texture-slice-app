@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { AppComponent } from './app.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: WelcomeComponent
+    component: LandingPageComponent
   },
   {
     path: 'feature',
-    loadChildren: './feature/feature.module#FeatureModule',
+    loadChildren: './cutting-floor/feature.module#FeatureModule',
   },
   {
   path : '**',
