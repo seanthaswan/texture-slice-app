@@ -1,24 +1,41 @@
 <form [formGroup]="myForm" (ngSubmit)="submitForm()">
-      
+
     <div class="form-group">
         <label for="file" class="custom-file-upload-button">Import Image</label>
-        <input 
-            name="file"
-            id="file" 
-            type="file" 
-            (change)="onFileChange($event)">
-            <div *ngIf="f.file.touched && f.file.invalid" class="window error-window">
-                <div *ngIf="f.file.errors.required" class="window-body">
-                    <div class="icon icon-error"></div>
-                    <p>File is required.</p>
-                </div>
+        <input name="file" id="file" type="file" accept="image/*" (change)="onFileChange($event)"
+            (submit)="submitForm()">
+        <div *ngIf="f.file.touched && f.file.invalid" class="window error-window">
+            <div *ngIf="f.file.errors.required" class="window-body">
+                <div class="icon icon-error"></div>
+                <p>File is required.</p>
             </div>
+        </div>
     </div>
-          
+
     <button type="submit">Submit</button>
 </form>
 
-<div class="drag-and-drop-container">
-    <div class="icon icon-drag-drop"></div>
-    <div class="text">Click above to browse your files or drag-n-drop the image here.</div>
+<div class="window inner-window">
+    <div class="window-body">
+        <div class="title-bar">
+            <div class="title-bar-text">{{ imagePreviewMetadata ? 'Image Preview': 'Drag-n-Drop Image Upload' }}</div>
+        </div>
+        <div class="drag-and-drop-container" *ngIf="!imagePreviewMetadata else imagePreview">
+            <div class="icon icon-drag-drop"></div>
+            <div class="text">Click above to browse your files or drag-n-drop the image here.</div>
+        </div>
+        <div class="status-bar">
+            <p class="status-bar-field">{{ imagePreviewMetadata ? imagePreviewMetadata.name : '- Upload an image -' }}</p>
+            <p class="status-bar-field">{{  imagePreviewMetadata ? (imagePreviewMetadata.size | fileSize:0) : '0kb'}}</p>
+            <p class="status-bar-field">Save the bees 🐝 🍯</p>
+        </div>
+    </div>
 </div>
+
+<!-- //---------------- -->
+<!--       templates    -->
+<!-- //---------------- -->
+
+<ng-template #imagePreview>
+    <img [src]="imagePreviewMetadata.previewUrl" />
+</ng-template>

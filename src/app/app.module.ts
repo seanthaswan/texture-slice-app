@@ -13,6 +13,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImageUploaderComponent } from './image-uploader/image-uploader.component';
+import { FileSizePipe } from './shared/pipes/file-size.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ImageUploaderComponent } from './image-uploader/image-uploader.componen
     NavbarComponent,
     FooterComponent,
     LandingPageComponent,
-    ImageUploaderComponent
+    ImageUploaderComponent,
+    FileSizePipe
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
