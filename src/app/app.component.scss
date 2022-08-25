@@ -1,28 +1,31 @@
 .window {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .window-body {
-    height: 100%;
-    margin: 1px;
-    display: flex;
+  height: 100%;
+  margin: 1px;
+  display: flex;
+  flex: 1;
 }
 
 aside {
-    width: 150px;
-    top: 19px;
-    left: -6px;
-    bottom: 16px;
+  width: 150px;
+  top: 19px;
+  left: -6px;
+  bottom: 16px;
 
-    .tree-view {
-        height: 100%;
-        overflow-y: scroll;
-    }
+  .tree-view {
+    height: 100%;
+    overflow-y: scroll;
+  }
 }
 
 main {
-    margin: 50px;
+  padding: 22px;
+  overflow-y: scroll;
+  width: 100%;
 }

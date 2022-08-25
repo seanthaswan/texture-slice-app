@@ -1,0 +1,39 @@
+.errors-container {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+}
+
+.error-window {
+  margin-bottom: 5px;
+  cursor: pointer;
+
+  &:hover {
+    outline: 1px dotted #000;
+    outline-offset: -4px;
+  }
+
+  .window-body {
+    .title-bar {
+      pointer-events: none;
+    }
+    margin: 2px;
+    .content-container {
+      display: flex;
+      padding: 5px;
+      pointer-events: none;
+    }
+
+    p {
+      margin: 0 10px;
+      align-self: center;
+    }
+  }
+}
+
+.icon-error {
+  background-image: url(../../assets/error-icon.png);
+  height: 32px;
+  width: 32px;
+  image-rendering: pixelated;
+}

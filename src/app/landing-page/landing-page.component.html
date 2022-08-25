@@ -1,9 +1,21 @@
 <h1>Texture Slice</h1>
 
-<hr>
+<hr />
 <p>Open-source web app for extracting textures from images.</p>
 
 <h2>Intro</h2>
-<p>Texture Slice is an open-source web app for extracting textures from images.</p>
-<p>Import an image to add it to the stage and move the bounds of the slicer to transform the texture.</p>
-<app-image-uploader></app-image-uploader>
+<p>
+  Texture Slice is an open-source web app for extracting textures from images.
+</p>
+<p>
+  Import an image to add it to the stage and move the bounds of the slicer to
+  transform the texture.
+</p>
+<app-image-uploader
+  *ngIf="!imageFile; else canvas"
+  (imageChanged)="imageChangedHandler($event)"
+></app-image-uploader>
+
+<ng-template #canvas>
+  <app-canvas></app-canvas>
+</ng-template>

@@ -1,32 +1,29 @@
 <div class="window">
-    <app-navbar></app-navbar>
-    <div class="window-body">
-  
-      <aside>
-        <ul class="tree-view">
-          <li><a [routerLink]="['/home']">Intro</a></li>
-          <li>
-            <a [routerLink]="['/app']">File</a>
-            <ul>
-              <li><a href="#button">Import</a></li>
-              <li><a href="#checkbox">Export</a></li>
-  
-            </ul>
-            
-          </li>
-          <li>
-            <a href="#window">More</a>
-            <ul>
-              <li><a href="#title-bar">Donate</a></li>
-              <li><a href="#window-contents">Contact</a></li>
-              <li><a href="#status-bar">GitHub</a></li>
-            </ul>
-          </li>
-        </ul>
-      </aside>
-      <main> 
-        <router-outlet></router-outlet>
-      </main>
-    </div>
-    <app-footer></app-footer>
+  <app-navbar></app-navbar>
+  <div class="window-body">
+    <aside>
+      <ul class="tree-view">
+        <li><a [routerLink]="['/home']">Intro</a></li>
+        <li>
+          <a [routerLink]="['/app']">File</a>
+          <ul>
+            <li><a href="#button">Import</a></li>
+            <li><a href="#checkbox">Export</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#window">More</a>
+          <ul>
+            <li><a href="#title-bar">Donate</a></li>
+            <li><a href="#window-contents">Contact</a></li>
+            <li><a href="#status-bar">GitHub</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
   </div>
+  <app-footer></app-footer>
+</div>
