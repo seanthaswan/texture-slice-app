@@ -7,16 +7,16 @@
         <li>
           <a [routerLink]="['/app']">File</a>
           <ul>
-            <li><a href="#button">Import</a></li>
-            <li><a href="#checkbox">Export</a></li>
+            <li><a [routerLink]="['/app/import']">Import</a></li>
+            <li><a [routerLink]="['/app/export']">Export</a></li>
           </ul>
         </li>
         <li>
-          <a href="#window">More</a>
+          <a [routerLink]="['/more']">More</a>
           <ul>
-            <li><a href="#title-bar">Donate</a></li>
-            <li><a href="#window-contents">Contact</a></li>
-            <li><a href="#status-bar">GitHub</a></li>
+            <li><a [routerLink]="['/more/donate']">Donate</a></li>
+            <li><a [routerLink]="['/more/contact']">Contact</a></li>
+            <li><a [routerLink]="['/more/github']">GitHub</a></li>
           </ul>
         </li>
       </ul>

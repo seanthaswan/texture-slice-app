@@ -16,15 +16,27 @@ import { ImageUploaderComponent } from "./image-uploader/image-uploader.componen
 import { FileSizePipe } from "./shared/pipes/file-size.pipe";
 import { CanvasComponent } from "./canvas/canvas.component";
 import { NotificationsComponent } from "./notifications/notifications.component";
+import { AppContainerComponent } from "./app-container/app-container.component";
+import { ImageExporterComponent } from "./image-exporter/image-exporter.component";
+import { MoreComponent } from "./more/more.component";
+import { DonateComponent } from "./donate/donate.component";
+import { ContactComponent } from "./contact/contact.component";
+import { GithubComponent } from "./github/github.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    AppContainerComponent,
     NavbarComponent,
     FooterComponent,
     LandingPageComponent,
     ImageUploaderComponent,
+    ImageExporterComponent,
     CanvasComponent,
+    MoreComponent,
+    DonateComponent,
+    ContactComponent,
+    GithubComponent,
     NotificationsComponent,
     FileSizePipe,
   ],

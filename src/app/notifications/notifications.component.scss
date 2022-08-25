@@ -14,10 +14,12 @@
   }
 
   .window-body {
+    margin: 2px;
+
     .title-bar {
       pointer-events: none;
     }
-    margin: 2px;
+
     .content-container {
       display: flex;
       padding: 5px;

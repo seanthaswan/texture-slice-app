@@ -1,0 +1,6 @@
+<router-outlet></router-outlet>
+
+<div *ngIf="url === '/app'">
+  <h2>Start here:</h2>
+  <a [routerLink]="['/app/import']">Image Uploader</a>
+</div>

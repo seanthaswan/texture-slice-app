@@ -1,15 +1,66 @@
-<h1>Texture Slice</h1>
+<div class="page-header">
+  <img src="../../assets/knife-icon.png" alt="knife icon" />
+  <h1>Texture Slice</h1>
+</div>
 
 <hr />
-<p>Open-source web app for extracting textures from images.</p>
 
-<h2>Intro</h2>
+<h2>What is it?</h2>
 <p>
   Texture Slice is an open-source web app for extracting textures from images.
 </p>
+
+<hr class="sub-section-divider" />
+<h2>When should I reach for Texture Slice?</h2>
 <p>
-  Import an image to add it to the stage and move the bounds of the slicer to
-  transform the texture.
+  This is especially useful when looking to extract a texture from images of
+  buildings or rotated objects that may need a perspective transformation to
+  appear straightened. This technique is called homography and uses 4 points to
+  create an area from which to calculate the matrix transforms needed for
+  correcting the perspective.
+</p>
+
+<p>
+  To learn more about Homography, please see
+  <a
+    href="https://towardsdatascience.com/understanding-homography-a-k-a-perspective-transformation-cacaed5ca17"
+    >this helpful article</a
+  >
+  by Socret Lee that breaks down this dense concept in a palatable format.
+</p>
+
+<hr class="sub-section-divider" />
+
+<h2>How do I use it?</h2>
+
+<p>
+  Import an image to add it to the stage. Click and drag the 4 vertices of the
+  slicer around to adjust the bounds to the area you wish to extract and
+  transform.
+</p>
+
+<p>Select "File > Import" option from the left sidebar to begin.</p>
+
+<p>
+  After you've sliced a texture out, select "File > Export" to download the
+  file.
+</p>
+
+<hr class="sub-section-divider" />
+
+<h2>Great! Anything else I should know?</h2>
+
+<p>
+  You can find more contact and project information under the "More" section.
+</p>
+
+<p>
+  In an effort to encourage open-source collaboration, this project is made
+  fully open and welcomes developers from all areas to consider contributing.
+  While this app is just a small side project of mine, I will make an effort to
+  participate in conversations that come up in Pull Requests and Issues within
+  GitHub. At some point it may take on a life of its own but until then, I'll
+  shepherd it through!
 </p>
 <app-image-uploader
   *ngIf="!imageFile; else canvas"
