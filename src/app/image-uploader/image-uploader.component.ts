@@ -1,8 +1,11 @@
 import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { DomSanitizer, SafeUrl } from "@angular/platform-browser";
+import { Router } from "@angular/router";
 import { StringFormatDefinition } from "ajv";
+import { BehaviorSubject } from "rxjs";
 import { FileSizePipe } from "../shared/pipes/file-size.pipe";
+import { ImageService } from "../shared/services/image.service";
 
 @Component({
   selector: "app-image-uploader",
@@ -27,7 +30,9 @@ export class ImageUploaderComponent implements OnInit {
   myFormPreviewData: string;
   imageFile: string | ArrayBuffer;
   errors: Error[] = [];
-  constructor(private sanitizer: DomSanitizer) {}
+
+
+  constructor(private sanitizer: DomSanitizer, private router: Router, private imageService: ImageService) {}
 
   get f() {
     return this.myForm.controls;
@@ -76,12 +81,9 @@ export class ImageUploaderComponent implements OnInit {
   }
 
   submitForm() {
-    this.imageChanged.emit(this.imageFile);
+    this.imageService.setImageObs(this.imageFile);
+    this.router.navigate(['/app/workspace']);
   }
 
   ngOnInit(): void {}
-}
-
-interface HTMLInputEvent extends Event {
-  target: HTMLInputElement & EventTarget;
 }

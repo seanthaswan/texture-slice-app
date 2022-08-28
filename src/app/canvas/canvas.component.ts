@@ -15,15 +15,11 @@ import {
 export class CanvasComponent implements OnInit, AfterViewInit {
   @ViewChild("appCanvas", { static: false }) myCanvas: ElementRef;
 
-  @Input()
-  imageFile: string | ArrayBuffer;
-
   public context: CanvasRenderingContext2D;
 
   constructor() {}
 
   ngOnInit() {
-    console.log("from Canvas", this.imageFile);
   }
 
   ngAfterViewInit(): void {

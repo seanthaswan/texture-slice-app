@@ -10,6 +10,7 @@ import { ImageExporterComponent } from "./image-exporter/image-exporter.componen
 import { ImageUploaderComponent } from "./image-uploader/image-uploader.component";
 import { LandingPageComponent } from "./landing-page/landing-page.component";
 import { MoreComponent } from "./more/more.component";
+import { WorkspaceComponent } from "./workspace/workspace.component";
 
 const routes: Routes = [
   {
@@ -29,8 +30,8 @@ const routes: Routes = [
         component: ImageExporterComponent,
       },
       {
-        path: "stage",
-        component: CanvasComponent,
+        path: "workspace",
+        component: WorkspaceComponent,
       },
     ],
   },

@@ -22,6 +22,7 @@ import { MoreComponent } from "./more/more.component";
 import { DonateComponent } from "./donate/donate.component";
 import { ContactComponent } from "./contact/contact.component";
 import { GithubComponent } from "./github/github.component";
+import { WorkspaceComponent } from './workspace/workspace.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { GithubComponent } from "./github/github.component";
     GithubComponent,
     NotificationsComponent,
     FileSizePipe,
+    WorkspaceComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: "my-app" }),

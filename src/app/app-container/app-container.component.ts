@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { Observable, Subscription } from "rxjs";
+import { ImageService } from "../shared/services/image.service";
 
 @Component({
   selector: "app-app-container",
@@ -7,13 +9,14 @@ import { Router } from "@angular/router";
   styleUrls: ["./app-container.component.scss"],
 })
 export class AppContainerComponent implements OnInit {
-  url: any;
+  url: Subscription | string;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private imageService: ImageService) {
     this.url = this.router.events.subscribe((event) => {
       this.url = this.router.url;
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 }

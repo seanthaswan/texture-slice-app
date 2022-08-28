@@ -39,7 +39,6 @@
   transform.
 </p>
 
-<p>Select "File > Import" option from the left sidebar to begin.</p>
 
 <p>
   After you've sliced a texture out, select "File > Export" to download the
@@ -62,10 +61,7 @@
   GitHub. At some point it may take on a life of its own but until then, I'll
   shepherd it through!
 </p>
-<app-image-uploader
-  *ngIf="!imageFile; else canvas"
-  (imageChanged)="imageChangedHandler($event)"
-></app-image-uploader>
+
 
 <ng-template #canvas>
   <app-canvas></app-canvas>

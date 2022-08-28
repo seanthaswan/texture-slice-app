@@ -1,14 +1,15 @@
 <div class="window">
-  <app-navbar></app-navbar>
+  <app-navbar (emitConfirmation)="triggerConfirmation()"></app-navbar>
   <div class="window-body">
     <aside>
       <ul class="tree-view">
-        <li><a [routerLink]="['/home']">Intro</a></li>
+        <li><a [routerLink]="['/home']">Home</a></li>
         <li>
-          <a [routerLink]="['/app']">File</a>
+          <a [routerLink]="['/app']">App</a>
           <ul>
             <li><a [routerLink]="['/app/import']">Import</a></li>
             <li><a [routerLink]="['/app/export']">Export</a></li>
+            <li><a [routerLink]="['/app/workspace']">Workspace</a></li>
           </ul>
         </li>
         <li>
@@ -26,4 +27,21 @@
     </main>
   </div>
   <app-footer></app-footer>
+</div>
+
+<div class="confirmation-modal-container" *ngIf="isConfirmationNeeded">
+  <div class="window">
+    <div class="title-bar">
+      <div class="title-bar-text">App Exit Confirmation</div>
+    </div>
+    <div class="window-body">
+      <div class="icon icon-warning"></div>
+      <div class="text">Warning: Any changes made may not be saved.</div>
+      <div class="text">Are you sure you want to close the app?</div>
+      <div class="modal-controls">
+        <button (click)="exitApp()">Exit App</button>
+        <button (click)="triggerConfirmation()">No, Go Back</button>
+      </div>
+    </div>
+  </div>
 </div>

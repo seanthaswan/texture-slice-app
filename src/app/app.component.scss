@@ -25,7 +25,45 @@ aside {
 }
 
 main {
-  padding: 22px;
-  overflow-y: scroll;
   width: 100%;
+}
+
+.confirmation-modal-container {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, .6);
+
+  .window {
+    min-height: 200px;
+
+    .window-body {
+      padding: 0 10px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .modal-controls {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+
+        button {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .icon-warning {
+    background-image: url(../assets/msg_warning-0.png);
+    opacity: 0.7;
+    height: 64px;
+    width: 64px;
+  }
 }
