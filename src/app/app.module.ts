@@ -9,7 +9,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { environment } from "../environments/environment";
 
 import { AppComponent } from "./app.component";
-import { LandingPageComponent } from "./landing-page/landing-page.component";
+import { HomeComponent } from "./home/home.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { FooterComponent } from "./footer/footer.component";
 import { ImageUploaderComponent } from "./image-uploader/image-uploader.component";
@@ -30,7 +30,7 @@ import { WorkspaceComponent } from './workspace/workspace.component';
     AppContainerComponent,
     NavbarComponent,
     FooterComponent,
-    LandingPageComponent,
+    HomeComponent,
     ImageUploaderComponent,
     ImageExporterComponent,
     CanvasComponent,

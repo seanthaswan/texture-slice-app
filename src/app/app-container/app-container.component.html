@@ -1,6 +1,6 @@
 <router-outlet></router-outlet>
 
-<div *ngIf="url === '/app'">
+<div class="app-index-container" *ngIf="url === '/app'">
   <h2>Start here:</h2>
   <a [routerLink]="['/app/import']">Image Uploader</a>
 </div>

@@ -8,14 +8,14 @@ import { DonateComponent } from "./donate/donate.component";
 import { GithubComponent } from "./github/github.component";
 import { ImageExporterComponent } from "./image-exporter/image-exporter.component";
 import { ImageUploaderComponent } from "./image-uploader/image-uploader.component";
-import { LandingPageComponent } from "./landing-page/landing-page.component";
+import { HomeComponent } from "./home/home.component";
 import { MoreComponent } from "./more/more.component";
 import { WorkspaceComponent } from "./workspace/workspace.component";
 
 const routes: Routes = [
   {
     path: "home",
-    component: LandingPageComponent,
+    component: HomeComponent,
   },
   {
     path: "app",

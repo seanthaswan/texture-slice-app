@@ -10,6 +10,12 @@
   margin: 1px;
   display: flex;
   flex: 1;
+
+  &#app-window-body {
+    @media (max-width: 550px) {
+      flex-direction: column;
+    }
+  }
 }
 
 aside {
@@ -20,7 +26,10 @@ aside {
 
   .tree-view {
     height: 100%;
-    overflow-y: scroll;
+  }
+
+  @media (max-width: 550px) {
+    width: auto;
   }
 }
 
