@@ -1,2 +1,10 @@
-Canvas:
-<canvas #appCanvas></canvas>
+<div class="canvas-label">
+    Preview
+</div>
+<canvas [width]="width" [height]="height" #previewCanvas>
+</canvas>
+<div class="canvas-label">
+Slice
+</div>
+<canvas [width]="width" [height]="height" #cuttingCanvas>
+</canvas>

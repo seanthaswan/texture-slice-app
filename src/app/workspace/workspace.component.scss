@@ -1,0 +1,12 @@
+.workspace-container {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+background-color: #b0b0b0;
+    background-image: url("https://www.transparenttextures.com/patterns/fake-brick.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+.instructions-container {
+    padding: 10px;
+}

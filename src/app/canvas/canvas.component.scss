@@ -1,0 +1,18 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+canvas {
+    border: 1px solid;
+    background: repeating-conic-gradient(#CCC 0% 25%, #b7b7b7 0% 50%) 50%/20px 20px;
+}
+
+.canvas-label {
+    background: black;
+    position: relative;
+    width: 80px;
+    top: 17px;
+    color: white;
+    text-align: center;
+}

@@ -1,3 +1,10 @@
-{{ image ? image : 'no image'}}
-
-<app-canvas *ngIf="image"></app-canvas>
+<div class="workspace-container" #workspaceContainer>
+  <div class="instructions-container">
+    <div class="window">
+        <div class="window-body">
+            <p>Help goes here.</p>
+        </div>
+    </div>
+  </div>
+  <app-canvas [image]="image" *ngIf="image"></app-canvas>
+</div>

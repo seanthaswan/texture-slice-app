@@ -1,5 +1,6 @@
 .window {
   min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -34,6 +35,7 @@ aside {
 }
 
 main {
+  height: 100%;
   width: 100%;
 }
 
@@ -50,6 +52,7 @@ main {
 
   .window {
     min-height: 200px;
+    height: auto;
 
     .window-body {
       padding: 0 10px;
