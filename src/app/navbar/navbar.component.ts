@@ -15,7 +15,6 @@ export class NavbarComponent implements OnInit {
   }
 
   openConfirmationModal() {
-    console.log('emitting...');
     this.emitConfirmation.emit(true);
   }
 

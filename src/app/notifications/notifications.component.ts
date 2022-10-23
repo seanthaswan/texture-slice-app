@@ -11,7 +11,6 @@ export class NotificationsComponent implements OnInit {
   constructor() {}
 
   popItem(e) {
-    console.log(e.target);
     const clickedItemIndex = e.target.attributes[2].value;
     this.errors.splice(clickedItemIndex, 1);
   }

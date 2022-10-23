@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
 
   triggerConfirmation() {
     this.isConfirmationNeeded = !this.isConfirmationNeeded;
-    console.log('triggered')
   }
 
   exitApp() {

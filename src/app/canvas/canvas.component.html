@@ -1,10 +1,22 @@
-<div class="canvas-label">
-    Preview
+<div class="canvas-container">
+    <div class="top-row">
+        <div class="canvas-label">
+            Preview
+        </div>
+    </div>
+    <canvas [width]="width" [height]="height" #previewCanvas>
+    </canvas>
 </div>
-<canvas [width]="width" [height]="height" #previewCanvas>
-</canvas>
-<div class="canvas-label">
-Slice
+
+<div class="canvas-container">
+    <div class="top-row">
+        <div class="canvas-label">
+            Slice
+        </div>
+        <div class="click-metadata-container">
+            <p class="click-metadata">{{ lastClick ? (lastClick | json) : 'Click on the canvas to start!'}}</p>
+        </div>
+    </div>
+    <canvas [width]="width" [height]="height" #cuttingCanvas>
+    </canvas>
 </div>
-<canvas [width]="width" [height]="height" #cuttingCanvas>
-</canvas>

@@ -8,11 +8,25 @@ canvas {
     background: repeating-conic-gradient(#CCC 0% 25%, #b7b7b7 0% 50%) 50%/20px 20px;
 }
 
+.canvas-container {
+    display: flex;
+    flex-direction: column;
+
+    .top-row {
+        display: flex;
+        justify-content: flex-start;
+        position:relative;
+        top: 17px;
+
+        .click-metadata-container {
+            padding: 0 10px;
+        }
+    }
+}
+
 .canvas-label {
     background: black;
-    position: relative;
     width: 80px;
-    top: 17px;
     color: white;
     text-align: center;
 }

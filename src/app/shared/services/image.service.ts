@@ -12,8 +12,6 @@ export class ImageService {
   }
 
   setImageObs(imageFile: string | ArrayBuffer) {
-    console.log('setting Image Observable')
-    console.log(imageFile);
     this.submittedImage$.next(imageFile);
   }
 

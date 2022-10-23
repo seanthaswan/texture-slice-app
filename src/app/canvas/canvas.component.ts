@@ -1,3 +1,4 @@
+import { ThrowStmt } from "@angular/compiler";
 import {
   AfterViewInit,
   ChangeDetectorRef,
@@ -32,17 +33,19 @@ export class CanvasComponent implements OnInit, AfterViewInit, OnDestroy {
   public cuttingCanvasContext: CanvasRenderingContext2D;
   public previewCanvasContext: CanvasRenderingContext2D;
   
+  public lastClick: {x: number, y: number, shiftKey: boolean, ctrlKey: boolean} = null;
 
   constructor(private cdref: ChangeDetectorRef, private imageService: ImageService, private canvasService: CanvasService) {
     this.canvasService = new CanvasService();
     }
 
   ngOnInit() {    
-    console.log(this.image);
+
   }
 
   ngAfterViewInit(): void {
-    const workspaceContainerEl = this.cuttingCanvas.nativeElement.parentElement.parentElement;
+    const workspaceContainerEl = this.cuttingCanvas.nativeElement.parentElement.parentElement.parentElement;
+    console.log(workspaceContainerEl);
     this.cuttingCanvasContext = this.cuttingCanvas.nativeElement.getContext("2d");
     this.previewCanvasContext = this.previewCanvas.nativeElement.getContext("2d");
     // Fix me: After instructions are filled out, adjust margins.
@@ -52,6 +55,10 @@ export class CanvasComponent implements OnInit, AfterViewInit, OnDestroy {
     this.height = ((workspaceContainerEl.offsetHeight - margin) / 2) - extra;
     this.canvasService.drawToStage(this.cuttingCanvasContext, this.image);    
     this.cdref.detectChanges();
+    this.canvasService.drawRectangle(this.cuttingCanvasContext, this.image);
+    this.cuttingCanvas.nativeElement.addEventListener('click', (e) => {
+      this.lastClick = this.canvasService.getCoordsAndKeysFromClick(e, this.cuttingCanvasContext);
+    });
   }
   
   ngOnDestroy() {

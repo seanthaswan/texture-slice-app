@@ -39,7 +39,6 @@ export class ImageUploaderComponent implements OnInit {
   }
 
   onFileChange(event: Event) {
-    console.log(event);
     const target = event.target as HTMLInputElement;
     const file: File = (target.files as FileList)[0];
     const reader: FileReader = new FileReader();
@@ -50,7 +49,6 @@ export class ImageUploaderComponent implements OnInit {
       const maxMb = 100;
 
       if (file.size > bytesInMb * maxMb) {
-        console.log(file.size, bytesInMb * maxMb);
         this.errors.push(
           new Error(
             `Your image is too big. Please re-upload an image that's ${maxMb}mb or less.`
